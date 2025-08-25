@@ -41,7 +41,6 @@
 
 <body class="index-page">
 
- 
   <header id="header" class="header d-flex flex-column justify-content-center">
 
     <i id="menuToggle" class="header-toggle d-xl-none fas fa-bars"></i>
@@ -107,7 +106,8 @@
     
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
-
+  
+ 
       <img class="imgg" src="https://wallpapercg.com/media/ts_orig/18805.webp" alt="" style="background-image: linear-gradient(white,white, transparent);">
     
       <div class="container" data-aos="zoom-out">
@@ -131,7 +131,12 @@
                   <i class="fas fa-download"></i> Download Resume
                 </button>
               </a>
-            </div>
+
+              
+           
+           
+ </div>
+ 
     
           </div>
         </div>
@@ -157,107 +162,49 @@
     <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about"  class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+     <section id="about"  class="about section">
+    <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
-      </div><!-- End Section Title -->
-      <div class="container about-container section-title" data-aos="fade-up">
-
-        <div class="about-text" id="aboutText">
-          <p>Hello! I’m Venu Kumar Chittimalla, a highly motivated and passionate B.Tech student Pursuing in Electrical and Electronics Engineering at Anil Neerukonda Institute of Technology and Sciences (ANITS), Visakhapatnam. I’m on a mission to transform innovative ideas into real-world solutions using the power of Artificial Intelligence, Machine Learning, and Software Engineering.</p>
-<hr>
-          <p>From the beginning of my academic journey, I’ve always been curious about how things work — whether it’s electronics, code, or systems. This curiosity quickly turned into a passion for technology, which led me to explore various domains beyond my core branch. Today, I’m actively building projects, participating in hackathons, and contributing to platforms that solve real-world problems.</p>
-				<hr>	<p>I’ve had the opportunity to lead and participate in several hackathons like the Smart India Hackathon and SUSHacks hackathon. These experiences taught me not only technical problem-solving but also team collaboration, project management, and delivering under pressure. I led the team in the internal hackathons, which further honed my leadership and communication skills.
-
-						In addition to my academic and hackathon experiences, I’ve working on impactful internships at Ceeras IT Services and Bluestock Fintech. At Ceeras, I contributed to the web development. At Bluestock Fintech, I got hands-on experience with real-world financial applications, enhancing both my backend and frontend development skills.</p>
-
-							<br>Beyond academics and development, I’m also working on a startup idea focused on revolutionizing the Indian agricultural marketing system. The concept is to use AI for price prediction, IoT for smart farming, and Blockchain for transparency, helping farmers reduce dependency on middlemen and improve productivity. We plan to collaborate with government schemes and build an AI-powered platform that interacts directly with farmers, guiding them toward a tech-enabled future.
-							
-							I’m always eager to learn new technologies and grow in both my personal and professional life. My areas of expertise and interest include:</p>
-				         
-              
-  <div class="container mt-4">
-    <div class="list-group">
-      <a href="#skills" class="list-group-item list-group-item-action custom-bg">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Skills</h5>
-        <small>28/04/2025</small>
       </div>
-      <p class="mb-1">My skills inculde...</p>
-      <small>Click to see</small>
-      </a>
-      <a href="#experience" class="list-group-item list-group-item-action custom-bg">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Experience</h5>
-        <small class="text-muted">28/04/2025</small>
-      </div>
-      <p class="mb-1">I have good experience in my skills to grow better...</p>
-      <small class="text-muted">Click to see</small>
-      </a>
-      <a href="#resume" class="list-group-item list-group-item-action custom-bg">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Resume</h5>
-        <small class="text-muted">27/04/2025</small>
-      </div>
-      <p class="mb-1">I have good resume to show case my skills and expertise</p>
-      <small class="text-muted">Click to see</small>
-      </a>
+    <div class="about-home">
+      <p>
+        Hi, I’m <strong>Chittimalla Venu Kumar</strong>, a passionate 
+        <strong>Software Developer</strong> from Vijayawada, India. 
+        I build scalable systems and applications with Django, React.js, 
+        PostgreSQL, and real-time systems. Currently pursuing my B.Tech in Electrical and Electronics Engineering.
+      </p>
+      <a href="{% url 'about' %}" class="btn">Read Full About Me →</a>
     </div>
-    </div>
-<i class="fa fas-arrow-down"></i>         
-        </div>
-        <button class="read-more-btn" id="readMoreBtn">Read More</button>
+  </section>
+  <style>
+    .about-home {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
 
-        </div>
-        
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row align-items-center g-5">
-            
-            <!-- Profile Image -->
-            <div class="col-lg-4 d-flex justify-content-center">
-              <div style="width: 250px; height: 250px; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);">
-                <img src="{% static 'assets/img/profile-img.png' %}" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-            </div>
-        
-            <!-- Info Content -->
-            <div class="col-lg-8 d-flex flex-column justify-content-center">
-              <div class="section-title text-center mb-4">
-                <h2>My Info</h2>
-              </div>
-        
-              <div class="row justify-content-center">
-                <div class="col-md-6 mb-3">
-                  <ul class="list-unstyled">
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Birthday:</strong> <span>21 May 2003</span></li>
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Phone:</strong> <span>+91 9392480464</span></li>
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>City:</strong> <span>Penuganchiproju, NTR District</span></li>
-                  </ul>
-                </div>
-        
-                <div class="col-md-6 mb-3">
-                  <ul class="list-unstyled">
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Age:</strong> <span>21</span></li>
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Degree:</strong> <span>B-Tech</span></li>
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Email:</strong> <span>rishikumar54020@gmail.com</span></li>
-                    <li class="mb-3"><i class="bi bi-chevron-right text-primary"></i> <strong>Job Availability:</strong> <span>Available</span></li>
-                  </ul>
-                </div>
-              </div>
-        
-            </div>
-          </div>
-        </div>
-        
-    </section><!-- /About Section -->
+.about-home p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #475569;
+}
+.about-home a{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.about-home a:hover{
+  cursor: pointer;
+  background-color:rgb(68, 150, 123);
+  color: beige;
+}
+
+</style>
+    <!-- /About Section -->
 
 
       <!-- Skills Section -->
-      <style>
-        
+<style> 
 /*Skills Section*/
 .skills-section {
   text-align: center;
@@ -544,34 +491,53 @@ and progress.</p>
   
   
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2 class="section-title"><span>Take a look at my</span> 
-          <!-- Section Title -->
-          <div class="container section-title" data-aos="fade-up">
-            <h2>Projects</h2>
-          </div><!-- End Section Title -->
-    </h2>
-    
-        <div class="project-card">
-          <img src="https://cdn.prod.website-files.com/65b0e179d4655faa9e6eedab/66125ee13ae6c5ad1730e48b_Frame-4272-1536x768.webp" alt="Stonk Market Project" class="project-img" />
-          <div class="project-content">
-            <h3>AI Blog Generator</h3>
-            <p class="tech">Technologies Used: <span>HTML,CSS,JS</span>, <span>REST API</span>,<span>Assembly AI</span>,<span>Open AI</span>, <span>Django</span>,<span>Postgresql</span></p>
-            <ul>
-              <li>Building an AI powered blog generator that converts youtube videos into well-structured blog articles using 
-                video transcripts and reduced manual blog writing time by 80%.</li>
-              <li>Used OpenAI and Assembly AI to the API calls to generate Well Structured Blog articles </li>
-              <li>This project Enhanced my skills more and I Learned How APIs work.</li>
-            </ul>
-            <div class="project-links">
-              <a href="#" target="_blank">Live</a>
-              <a href="https://github.com/rishikumar-cell/ai_blog_generator" target="_blank">Repo</a>
-            </div>
-          </div>
+ <!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title"><span>Take a look at my</span></h2>
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Projects</h2>
+    </div><!-- End Section Title -->
+
+    <div class="project-card">
+      <img src="https://cdn.prod.website-files.com/65b0e179d4655faa9e6eedab/66125ee13ae6c5ad1730e48b_Frame-4272-1536x768.webp" alt="Stonk Market Project" class="project-img" />
+      <div class="project-content">
+        <h3>AI Blog Generator</h3>
+        <p class="tech">Technologies Used: <span>HTML,CSS,JS</span>, <span>REST API</span>,<span>Assembly AI</span>,<span>Open AI</span>, <span>Django</span>,<span>Postgresql</span></p>
+        <ul>
+          <li>Building an AI powered blog generator that converts youtube videos into well-structured blog articles using 
+            video transcripts and reduced manual blog writing time by 80%.</li>
+          <li>Used OpenAI and Assembly AI to the API calls to generate Well Structured Blog articles </li>
+          <li>This project Enhanced my skills more and I Learned How APIs work.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" target="_blank">Live</a>
+          <a href="https://github.com/rishikumar-cell/ai_blog_generator" target="_blank">Repo</a>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Button to go to full projects page -->
+    <div class="view-all-projects" style="text-align:center; margin-top:30px;">
+      <a href="{% url 'projects' %}" class="btn">See All Projects</a>
+    </div>
+    <style>
+      .view-all-projects a{
+        border: 1px solid black;
+        border-radius: 5px;
+
+      }
+      .view-all-projects a:hover{
+        cursor: pointer;
+        background-color:rgb(53, 142, 113);
+      }
+
+    </style>
+
+  </div>
+</section>
+<!-- /Project Section -->
+
     <!-- /Project Section -->
 
     
@@ -618,7 +584,7 @@ and progress.</p>
           <br><br>
          
           <div class="col-lg-8">
-            <form action="{% url 'contact' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="{% url 'index' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               {% csrf_token %}
               <div class="row gy-4">
           

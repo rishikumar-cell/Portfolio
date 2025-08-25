@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naga Lakshmi | Projects</title>
+  <meta name="description" content="Projects of Naga Lakshmi Narasimha Rao Vemula, Full Stack Developer skilled in Django, React.js, PostgreSQL, and real-time systems.">
+  <link href="{% static 'assets/css/projects.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Back Button -->
+<button id="backBtn" class="back-btn">← Back</button>
+
+   
+  <!-- Day/Night Toggle Button -->
+  <button id="toggleTheme" class="toggle-btn">🌙</button>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h3>My Work</h3>
+      <h1>Projects I've <span class="highlight">Built</span></h1>
+      <p>Check out some of my notable projects in web and mobile development.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+    <div class="hero-img">
+      <img src="{% static 'assets/images/your-photo.jpg' %}" alt="Profile">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Featured Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="{% static 'assets/images/project1.png' %}" alt="GoSlow">
+        <h3>GoSlow</h3>
+        <p>Real-time road safety app using React Native & Django, with dynamic geofencing & speed alerts.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="card">
+        <img src="{% static 'assets/images/project2.png' %}" alt="Helper Hub">
+        <h3>Helper Hub</h3>
+        <p>Platform connecting users with home maids, drivers, and watchmen using React Native & Django.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="card">
+        <img src="{% static 'assets/images/project3.png' %}" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio built with Django & HTML/CSS showcasing projects and experience.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section light">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:vemulalakshminarasimha@gmail.com">vemulalakshminarasimha@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/naga-lakshmi" target="_blank">linkedin.com/in/naga-lakshmi</a></p>
+    <p>GitHub: <a href="https://github.com/naga" target="_blank">github.com/naga</a></p>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleTheme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Change icon
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+
+      const backBtn = document.getElementById('backBtn');
+  backBtn.addEventListener('click', () => {
+    window.history.back();
+  });
+  </script>
+</body>
+</html>

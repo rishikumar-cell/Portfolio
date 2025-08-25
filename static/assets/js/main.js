@@ -106,3 +106,24 @@
 
 })();
 
+ const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Load saved theme from localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Change icon
+    if (body.classList.contains('dark-mode')) {
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    }
+  });
