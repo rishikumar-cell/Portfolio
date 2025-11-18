@@ -1,0 +1,65 @@
+# Python general
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static_root/
+
+# Ignore Django migrations (optional, if you don't want auto-generated migration files)
+*/migrations/
+!*/migrations/__init__.py
+
+# Environment variables
+.env
+.env.local
+*.env
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node modules (if you use npm/yarn in project)
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Backup files
+*.bak
+*.swp
+
+# Coverage reports
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# MyPy
+.mypy_cache/
+
+# Pipenv
+Pipfile.lock
+
+# pytest
+.pytest_cache/

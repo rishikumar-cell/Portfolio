@@ -1,0 +1,100 @@
+
+
+/* About Section Container */
+.about-container {
+  background: var(--background-color);
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .conatiner {
+  background: #ffffff;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+}
+
+/* About Title */
+.about-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* About Text Section */
+.about-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  text-align: center;
+  overflow: hidden;
+  max-height: 150px; /* Initial collapsed height */
+  transition: max-height 0.6s ease;
+  position: relative;
+}
+
+/* Paragraph spacing inside about */
+.about-text p {
+  margin-bottom: 16px;
+}
+
+/* Expanded About Section */
+.about-text.open {
+  max-height: 2000px; /* Big enough to show full text */
+}
+
+/* Fade Gradient (for hidden part) */
+.fade-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Hide gradient when open */
+.about-text.open .fade-gradient {
+  opacity: 0;
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: block;
+  margin: 20px auto 0;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Hover Effect for Button */
+.read-more-btn:hover {
+  background-color: #074739;
+}
+
+.list-group-item.custom-bg {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item.custom-bg:hover {
+  background-color: var(--accent-color); /* light sky blue */
+}

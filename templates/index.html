@@ -1,0 +1,689 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Venu Kumar Chittimalla</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/profile-img.png' %}" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/about.css' %}" rel="stylesheet">
+
+  <!--Font awasome icons-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+</link>
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i id="menuToggle" class="header-toggle d-xl-none fas fa-bars"></i>
+
+    <script>
+      const toggleIcon = document.getElementById('menuToggle');
+    
+      toggleIcon.addEventListener('click', () => {
+        toggleIcon.classList.toggle('fa-bars');
+        toggleIcon.classList.toggle('fa-times');
+        // Add the menu toggle functionality here (for showing/hiding the menu)
+      });
+    </script>
+   
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
+        <li><a href="#skills"><i class="fas fa-cogs"></i><span>Skills</span></a></li>
+        <li><a href="#resume"><i class="fas fa-file-alt"></i><span>Resume</span></a></li>
+        <li><a href="#experience"><i class="fas fa-business-time"></i><span>Experience</span></a></li>
+        <li><a href="#projects"><i class="fas fa-tasks"></i><span>Projects</span></a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+      </ul>
+
+      <style>/* Button Styling */
+        .download-btn {
+          display: inline-flex;
+          align-items: center;
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          font-size: 1.1rem;
+          padding: 0.8rem 1.5rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .download-btn i {
+          margin-right: 0.5rem;
+        }
+        
+        .download-btn:hover {
+          background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
+          transform: scale(1.05);
+        }
+        
+        .download-btn:focus {
+          outline: none;
+        }
+        </style>
+    
+
+    </nav>
+
+  </header>
+
+
+  <main class="main">
+
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+  
+ 
+      <img class="imgg" src="https://wallpapercg.com/media/ts_orig/18805.webp" alt="" style="background-image: linear-gradient(white,white, transparent);">
+    
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+    
+            <h2 style="display: block; color: rgb(146, 146, 102);">Venu Kumar Chittimalla</h2>
+    
+            <p>I'm <span class="typed" data-typed-items="Full-Stack Web Developer,Passion on AIML Engineer,Problem Solver,Video Editor"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+    
+            <div class="social-mdeia">
+              <a href="https://linkedin.com/in/ch-venukumar"><i class="fab fa-linkedin-in"><span> | </span></i></a>
+              <a href="https://github.com/rishikumar-cell"><i class="fab fa-github"><span> | </span></i></a>
+              <a href="https://www.instagram.com/__rishi._.19/"><i class="fab fa-instagram"></i></a>
+              <br><br>
+            </div>
+    
+            <div style="padding-top: 20rem;">
+              <a href="{% static 'assets/Venu_Kumar_Chittimalla_Resume.pdf' %}" download>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i> Download Resume
+                </button>
+              </a>
+
+              
+           
+           
+ </div>
+ 
+    
+          </div>
+        </div>
+      </div>
+    
+    </section>
+    
+    <!-- Typed.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Initialize Typed.js -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var typed = new Typed('.typed', {
+          strings: document.querySelector('.typed').getAttribute('data-typed-items').split(','),
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 2000,
+          loop: true
+        });
+      });
+    </script>
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+     <section id="about"  class="about section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+      </div>
+    <div class="about-home">
+      <p>
+        Hi, I’m <strong>Chittimalla Venu Kumar</strong>, a passionate 
+        <strong>Software Developer</strong> from Vijayawada, India. 
+        I build scalable systems and applications with Django, React.js, 
+        PostgreSQL, and real-time systems. Currently pursuing my B.Tech in Electrical and Electronics Engineering.
+      </p>
+      <a href="{% url 'about' %}" class="btn">Read Full About Me →</a>
+    </div>
+  </section>
+  <style>
+    .about-home {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-home p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #475569;
+}
+.about-home a{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.about-home a:hover{
+  cursor: pointer;
+  background-color:rgb(68, 150, 123);
+  color: beige;
+}
+
+</style>
+    <!-- /About Section -->
+
+
+      <!-- Skills Section -->
+<style> 
+/*Skills Section*/
+.skills-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.skills-category {
+  margin-bottom: 50px;
+}
+
+.skills-category h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 120px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.skill-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+
+      </style>
+   <section class="skills-section" id="skills">
+    
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div><!-- End Section Title -->
+
+  
+    <div class="skills-category">
+      <h3>Front-end</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/html.png' %}" alt="JavaScript">
+          <p>HTML</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/css.png' %}" alt="React">
+          <p>CSS</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/reactjs.png' %}" alt="React">
+          <p>React</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/bootstrap.png' %}" alt="React">
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/tailwindcss.png' %}" alt="React">
+          <p>tailwind CSS</p>
+        </div>
+       
+       
+      </div>
+    </div>
+  
+    <div class="skills-category">
+      <h3>Back-end</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/django.png' %}" alt="MongoDB">
+          <p>Django</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/nodejs.png' %}" alt="MongoDB">
+          <p>Node</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/python.png' %}" alt="MongoDB">
+          <p>Python</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/postgresql.png' %}" alt="MongoDB">
+          <p>Postgresql</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/mongodb.png' %}" alt="MongoDB">
+          <p>Mongo DB</p>
+        </div>
+      
+      </div>
+    </div>
+  
+    <div class="skills-category">
+      <h3>Other</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/git.png' %}" alt="Git">
+          <p>Git</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/vercel.png' %}" alt="Git">
+          <p>Vercel</p>
+        </div>
+        <div class="skill-card">
+          <img src="{% static 'assets/img/icons/postman.png' %}" alt="Git">
+          <p>Postman</p>
+        </div>
+       
+        </div>
+    </div>
+  </section>
+  
+
+
+  <!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Profile</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Venu Kumar Chittimalla</h4>
+              <p><em>Aspiring and results-driven engineering student with hands-on experience in software development, 
+                hackathons, and real-world project implementation. Passionate about building scalable tech solutions with 
+                a focus on AI, ML, and data-driven innovation. Seeking an opportunity to contribute to impactful projects in a 
+                dynamic organization, while continuously enhancing my technical and problem-solving skills.</em></p>
+              <ul>
+                <li>Penuganchiprolu, NTR District</li>
+                <li>+91 9392480464</li>
+                <li>rishikumar54020@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Technology &amp; Electrical Engineering</h4>
+              <h5>2022 - present</h5>
+              <p><em>Anil Neerukonda Institute of Technology and Sciences, Vizag</em></p>
+              <p>CGPA : 8.2 (present)</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Intermediate &amp; Maths, Physics, Chemistry</h4>
+              <h5>2020 - 2022</h5>
+              <p><em>Chaithanya Junior College, Nandhigama</em></p>
+              <p>CGPA : 7.93</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Software Intern at BlueStocks Fintech</h4>
+              <h5>May, 2025 - June, 2025</h5>
+              <p><em>Online Internship</em></p>
+              <ul>
+                <li>Got an Internship at Bluestocks Fintech as a Software Development Engineer</li>
+                 </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Full-Stack Intern at Ceeras IT Services</h4>
+              <h5>Feb, 2025 - July, 2025</h5>
+              <p><em>Online internship</em></p>
+              <ul>
+                <li>contributed in Ceeras Team to buid responsive and scalable web solutions.</li>
+                <li>Worked on both frontend and backend technologies.</li>
+                <li>developing a web application where it used to search for the required product in nearby shops.</li>
+                
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+  <!-- Experience Section -->
+
+    
+  <section id="experience" class="experience-section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Experience</h2>
+      </div><!-- End Section Title -->
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-date">May 1, 2025 - June 30, 2025</p>
+          <h3 class="timeline-title">Software Intern[BlueStocks Fintech]</h3>
+          <p class="timeline-description">
+            Got an Internship at Bluestocks Fintech Company as a Software Development Engineer.
+          </p>
+        </div>
+      </div>
+  
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-date">Feb, 2025 - Present</p>
+          <h3 class="timeline-title">Full-Stack Intern</h3>
+          <p class="timeline-description">
+Currently working as a Full-Stack Developer at Ceeras IT Services          </p>
+        </div>
+      </div>
+  
+      
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-date">Sept-Oct, 2024</p>
+          <h3 class="timeline-title">SUSHacks Hackathon Lead </h3>
+          <p class="timeline-description">
+            <b>Team Leadership:</b> Led a diverse team of 3 members in the SUS Hacks Hackathon Which is conducted by
+the Vignan Vizag, coordinating tasks and managing project timelines to ensure effective collabora- tion 
+and progress.</p>
+<hr>
+<p class="timeline-description">
+ <b>Hackathon Achievement:</b> Achieved top 10 selection in SUS Hacks, demonstrating innovation and 
+  technical expertise in developing a solution among competitive teams.</p>
+
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-date">Sept-Oct, 2023</p>
+          <h3 class="timeline-title">Smart India Hackathon Lead </h3>
+          <p class="timeline-description">
+            <b>Team Leadership:</b> Led a diverse team of 6 members in the Smart India Hackathon, coordinating tasks 
+            and managing project timelines to ensure effective collaboration and progress and developed an innovative solutions aligned with real-world problem statements, fostering a collaborative environment for 
+            brainstorming.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  
+    <!-- Projects Section -->
+ <!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title"><span>Take a look at my</span></h2>
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Projects</h2>
+    </div><!-- End Section Title -->
+
+    <div class="project-card">
+      <img src="https://cdn.prod.website-files.com/65b0e179d4655faa9e6eedab/66125ee13ae6c5ad1730e48b_Frame-4272-1536x768.webp" alt="Stonk Market Project" class="project-img" />
+      <div class="project-content">
+        <h3>AI Blog Generator</h3>
+        <p class="tech">Technologies Used: <span>HTML,CSS,JS</span>, <span>REST API</span>,<span>Assembly AI</span>,<span>Open AI</span>, <span>Django</span>,<span>Postgresql</span></p>
+        <ul>
+          <li>Building an AI powered blog generator that converts youtube videos into well-structured blog articles using 
+            video transcripts and reduced manual blog writing time by 80%.</li>
+          <li>Used OpenAI and Assembly AI to the API calls to generate Well Structured Blog articles </li>
+          <li>This project Enhanced my skills more and I Learned How APIs work.</li>
+        </ul>
+        <div class="project-links">
+          <a href="#" target="_blank">Live</a>
+          <a href="https://github.com/rishikumar-cell/ai_blog_generator" target="_blank">Repo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to go to full projects page -->
+    <div class="view-all-projects" style="text-align:center; margin-top:30px;">
+      <a href="{% url 'projects' %}" class="btn">See All Projects</a>
+    </div>
+    <style>
+      .view-all-projects a{
+        border: 1px solid black;
+        border-radius: 5px;
+
+      }
+      .view-all-projects a:hover{
+        cursor: pointer;
+        background-color:rgb(53, 142, 113);
+      }
+
+    </style>
+
+  </div>
+</section>
+<!-- /Project Section -->
+
+    <!-- /Project Section -->
+
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Penuganchiproju, NTR District </p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h3>Call Me</h3>
+                <p>+91 9392480464</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="fas fa-envelope"></i>
+
+              <div>
+                <h3>Email Me</h3>
+                <p>rishikumar54020@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+<hr>
+          <br><br>
+         
+          <div class="col-lg-8">
+            <form action="{% url 'index' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              {% csrf_token %}
+              <div class="row gy-4">
+          
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+          
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+          
+                <div class="col-md-12">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+          
+                <div class="col-md-12">
+                  <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                </div>
+          
+                <div class="col-md-12 text-center">
+                  <div class="loading" style="display: none;">Loading...</div>
+                  <div class="error-message" style="display: none; background-color: #ff4d4d; color: white; padding: 10px; border-radius: 6px; margin-top: 10px;"></div>
+                  <div class="sent-message" style="display: none; background-color: #59ca48; color: white; padding: 10px; border-radius: 6px; margin-top: 10px;">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+          
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn-send">Send Message</button>
+                </div>
+          
+              </div>
+            </form>
+          </div>
+          
+            
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+
+
+
+  <footer id="footer" class="footer position-relative gray-background " style=" background-color: var(--default-color); color: whitesmoke;" >
+    <div class="container ">
+      <h3 class="sitename " style="color: rgb(186, 186, 129);;">Venu Kumar Chittimalla</h3>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://x.com/kumar_rish7207"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/__rishi._.19/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/venukumarch/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/rishikumar-cell"><i class="fab fa-github"></i></a>
+
+      </div>
+      <div class="social-links">
+        <ul class="liss-ul">
+        <li>Mobile : +91 9392480464</li>
+        <li>Email : rishikumar54020@gmail.com</li>
+      </ul>
+      <style>
+        .liss-ul{
+          display: block;
+          list-style: none; 
+        }
+      </style>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          <span>Powered By</span> <strong class="px-1 sitename">Venu Kumar Chittimalla</strong> 
+        </div>
+       
+      </div>
+    </div>
+  </footer>
+</main>
+<hr>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+   <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{% static 'assets/js/about.js' %}"></script>
+
+</body>
+
+</html>
