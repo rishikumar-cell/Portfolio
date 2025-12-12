@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import contact_view
 
 
 urlpatterns = [
@@ -8,4 +9,5 @@ urlpatterns = [
     path("project2/", views.project2,name="project2"),
     path("project3/", views.project3,name="project3"),
     path("project4/", views.project4,name="project4"),
+    path("contact-submit/", contact_view, name="contact-submit"),
 ]

@@ -296,3 +296,44 @@ document.addEventListener("click", (e) => {
         resumeMenu.classList.add("hidden");
     }
 });
+
+
+
+
+//contact form
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = this;
+    const submitBtn = document.getElementById("submitBtn");
+    const successPopup = document.getElementById("successPopup");
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+
+    const response = await fetch("/contact-submit/", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        // Show popup
+        successPopup.classList.remove("opacity-0", "pointer-events-none");
+
+        // Hide popup after 2.5 seconds
+        setTimeout(() => {
+            successPopup.classList.add("opacity-0", "pointer-events-none");
+        }, 2500);
+
+        form.reset();
+    } else {
+        alert("Something went wrong. Try again.");
+    }
+
+    submitBtn.textContent = "Send Message";
+    submitBtn.disabled = false;
+});
