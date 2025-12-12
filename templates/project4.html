@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= GO BACK ================= -->
+    <a href="{% url 'home' %}" class="fixed top-6 left-6 text-gray-400 hover:text-white text-sm tracking-wide">
+        ← Go Back
+    </a>
+
+
+    <!-- ================= PROJECT TITLE ================= -->
+    <section class="w-full pt-32 pb-16 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-semibold opacity-0 translate-y-6 project-title">
+            Portfolio
+        </h1>
+        <p class="max-w-xl mx-auto text-gray-400 text-sm mt-4 opacity-0 translate-y-6 project-sub">
+            A deeper look into how this project was built, the process, decisions,
+            technologies, and the final outcome.
+        </p>
+    </section>
+
+
+    <!-- ================= PROJECT IMAGE ================= -->
+    <section class="w-full px-6 pb-20">
+        <img src="{% static 'images/portfolio.png' %}"
+            class="w-full h-[420px] object-cover rounded-3xl border border-white/10 opacity-0 translate-y-6 project-img">
+    </section>
+
+    <div class="w-full flex justify-center mt-10">
+        <div class="flex gap-6">
+
+            <!-- LIVE DEMO BUTTON -->
+            <a href="https://your-live-demo-link" target="_blank" class="px-6 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 
+              text-white text-sm font-medium flex items-center gap-3
+              hover:bg-white/20 transition-all duration-300 shadow-lg">
+
+                <!-- Link Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M13.5 6H9a3 3 0 00-3 3v6a3 3 0 003 3h6a3 3 0 003-3v-4.5m0-3L12 12m4.5-4.5L12 12" />
+                </svg>
+
+                Live Demo
+            </a>
+
+            <!-- GITHUB BUTTON -->
+            <a href="https://github.com/your-repo" target="_blank" class="px-6 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20
+              text-white text-sm font-medium flex items-center gap-3
+              hover:bg-white/20 transition-all duration-300 shadow-lg">
+
+                <!-- GitHub Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path d="M12 .5C5.649.5.5 5.797.5 12.297c0 5.215 3.438 9.645 8.207 11.204.6.113.82-.27.82-.6
+                  0-.297-.011-1.083-.017-2.127-3.338.758-4.042-1.658-4.042-1.658-.546-1.425-1.333-1.806-1.333-1.806
+                  -1.089-.777.083-.762.083-.762 1.205.087 1.84 1.278 1.84 1.278 1.07 1.907 2.807 1.356 3.492 1.037
+                  .108-.803.418-1.356.762-1.67-2.665-.316-5.467-1.39-5.467-6.183 0-1.366.465-2.482 1.235-3.357
+                  -.124-.318-.536-1.593.117-3.32 0 0 1.008-.335 3.3 1.28a11.27 11.27 0 013.01-.42c1.02.005 2.047.145 3.01.42
+                  2.29-1.615 3.297-1.28 3.297-1.28.655 1.727.243 3.002.12 3.32.77.875 1.232 1.991 1.232 3.357
+                  0 4.804-2.807 5.864-5.48 6.172.43.385.823 1.15.823 2.32 0 1.674-.015 3.02-.015 3.43
+                  0 .334.218.72.825.597A11.81 11.81 0 0023.5 12.297C23.5 5.797 18.351.5 12 .5z" />
+                </svg>
+
+                GitHub Repo
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ================= PROJECT DESCRIPTION (Skills-style layout) ================= -->
+    <section class="w-full px-6 py-24">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+
+            <!-- LEFT -->
+            <div>
+                <h2 class="text-3xl font-semibold mb-6 opacity-0 translate-y-6 project-h2">
+                    Overview
+                </h2>
+
+                <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                    This portfolio was created with a clear intent: present my work in a clean, modern, and high-clarity
+                    format without unnecessary visuals or distractions. The focus is on precision, smooth interaction,
+                    and a layout that communicates information efficiently. Every section, transition, and spacing
+                    decision was made to create a professional, minimal, and fast experience that reflects my actual
+                    design and engineering standards. </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div>
+                <h2 class="text-3xl font-semibold mb-6 opacity-0 translate-y-6 project-h2">
+                    Technologies Used
+                </h2>
+
+                <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                    • HTML, CSS, Tailwind <br>
+                    • JavaScript <br>
+                    • GSAP / AOS animations <br>
+                    • Responsive layout architecture <br>
+                    • Component-driven UI structure <br>
+                    • Clean and optimized code organization <br>
+                    The stack is deliberately lightweight to maintain speed, consistency, and pixel-accurate control
+                    over the interface. </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= PROCESS SECTION ================= -->
+    <section class="w-full px-6 py-24 bg-[#0a0a0a]">
+        <div class="max-w-3xl mx-auto">
+
+            <h2 class="text-3xl font-semibold mb-10 opacity-0 translate-y-6 project-h2">
+                Process & Decisions
+            </h2>
+
+            <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                The build process centered on clarity: defining the layout, identifying essential sections, and removing
+                anything that didn’t serve a direct purpose.
+                Animations and transitions were added only where they improved flow, not for decoration.
+                Micro-interactions, spacing, and visual rhythm were tuned to make navigation feel smooth and
+                intentional. <br><br>
+                The design avoids clutter, heavy assets, or distracting effects. The objective was a portfolio that
+                demonstrates capability through restraint and precision rather than excess. </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= RESULT SECTION ================= -->
+    <section class="w-full px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+
+            <h2 class="text-3xl font-semibold mb-10 opacity-0 translate-y-6 project-h2">
+                Final Outcome
+            </h2>
+
+            <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                The final portfolio is fast, minimal, and visually stable across devices. It presents information
+                cleanly, communicates my skills without noise, and reflects the type of digital experiences I aim to
+                build—focused, modern, and engineered with attention to detail. </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= GSAP ANIMATIONS ================= -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray([
+            ".project-title", ".project-sub",
+            ".project-img",
+            ".project-h2", ".project-text"
+        ]).forEach(el => {
+            gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 1.1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%"
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

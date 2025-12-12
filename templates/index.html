@@ -1,0 +1,655 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Section</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- GOOGLE FONT IMPORTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Oswald:wght@500;700&family=Bebas+Neue&family=Anton&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body class="relative">
+
+
+    <!-- HERO SECTION ONLY -->
+    <section id="home" class="relative h-screen w-full overflow-hidden">
+
+
+
+        <!-- Background Image -->
+        <img id="heroBg" class="hero-bg" src="{% static 'images/image.png' %}" alt="Hero Background">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="absolute top-5 left-5 text-small text-white/80 tracking-wide 
+            hover:text-orange transition-all duration-300 z-20">
+            © Code by Venu Kumar
+        </div>
+        <!-- Resume Dropdown -->
+        <div class="absolute top-5 right-5 text-right z-30">
+
+            <!-- MAIN BUTTON -->
+            <div class="relative inline-block">
+                <button id="resumeBtn" class="px-6 py-3 border border-white/20 rounded-full text-white text-sm 
+                   hover:border-white hover:bg-white/10 transition-all duration-300 
+                   tracking-wide backdrop-blur-sm hover:scale-[1.03] active:scale-[0.98]">
+                    Resume ▾
+                </button>
+
+                <!-- DROPDOWN MENU -->
+                <div id="resumeMenu" class="hidden absolute right-0 mt-2 w-44 bg-black/70 backdrop-blur-xl border border-white/10
+                   rounded-xl shadow-lg py-2 text-sm">
+
+                    <!-- View Resume -->
+                    <a href="{% static 'files/Venu_Kumar_Resume.pdf' %}" target="_blank"
+                        class="block px-4 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition">
+                        View Resume
+                    </a>
+
+                    <!-- Download Resume -->
+                    <a href="{% static 'files/Venu_Kumar_Resume.pdf' %}" download="Venu_Kumar_Resume.pdf"
+                        class="block px-4 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- CENTER CONTENT -->
+        <br><br><br><br><br><br><br>
+        <div class="relative z-20 flex flex-col items-center justify-center h-full px-6 ">
+
+            <!-- HERO TITLE WITH SCROLLING TICKER -->
+            <h2 class="hero-title text-center text-gray-300 text-[65px] md:text-[120px] mb-10
+         tracking-[0.15em] uppercase
+        font-[Oswald]
+
+">
+                <span class="ticker-wrap">
+                    <span class="ticker-wrap">
+                        <div id="ticker" class="ticker">
+                            <!-- COPY 1 -->
+                            <span>Developer -</span>
+                            <span>Engineer -</span>
+                            <span>Coder -</span>
+                            <span>ML Enthusiast -</span>
+
+                            <!-- COPY 2 (for seamless loop) -->
+                            <span>Developer -</span>
+                            <span>Engineer -</span>
+                            <span>Coder -</span>
+                            <span>ML Enthusiast -</span>
+                        </div>
+                    </span>
+                </span>
+            </h2>
+            <!-- Floating mini navbar -->
+            <!-- Floating mini navbar -->
+            <div class="floating-nav fixed bottom-6 left-1/2 -translate-x-1/2 
+            flex items-center gap-3 px-5 py-3
+            bg-black/70 backdrop-blur-xl border border-white/10
+            rounded-full z-50 shadow-lg">
+
+                <!-- HOME -->
+                <a href="#home" class="floating-icon w-10 h-10 flex items-center justify-center 
+        text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 12l9.5-9.5 9.5 9.5M4.5 10.5V21h15V10.5" />
+                    </svg>
+                </a>
+
+                <!-- ABOUT -->
+                <a href="#about" class="floating-icon w-10 h-10 flex items-center justify-center 
+        text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 21a8.25 8.25 0 0115 0" />
+                    </svg>
+                </a>
+
+                <!-- SKILLS -->
+                <a href="#skills" class="floating-icon w-10 h-10 flex items-center justify-center 
+        text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.5 6h3l1.5-3h-6l1.5 3zM3.75 9h16.5l.75 3-3.75 9H6.75l-3.75-9 .75-3z" />
+                    </svg>
+                </a>
+
+                <!-- PROJECTS -->
+                <a href="#projects" class="floating-icon w-10 h-10 flex items-center justify-center 
+        text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 7.5h6l2-2h10.5v12.75A2.75 2.75 0 0118.75 21H5.25A2.75 2.75 0 012.5 18.25V7.5z" />
+                    </svg>
+                </a>
+
+                <!-- EXPERIENCE -->
+                <a href="#experience" class="floating-icon w-10 h-10 flex items-center justify-center 
+        text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 7.5h18M3 7.5v9.75A2.75 2.75 0 005.75 20h12.5A2.75 2.75 0 0021 17.25V7.5M3 7.5L6 3h12l3 4.5" />
+                    </svg>
+                </a>
+
+                <!-- CONTACT -->
+                <a href="#contact" class="floating-icon w-10 h-10 flex items-center justify-center 
+        text-gray-300 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 5.25h16.5v13.5H3.75V5.25zM3.75 5.25l8.25 6 8.25-6" />
+                    </svg>
+                </a>
+
+            </div>
+
+
+
+
+    </section>
+    <!--Hero Section Ends-->
+
+    <!--About Me Section-->
+    <section id="about" class="w-full bg-black text-white py-32 px-6">
+
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+
+            <!-- LEFT: IMAGE + FLOATING STATS -->
+            <div class="relative flex justify-center opacity-0 translate-y-10 about-image-wrap group perspective">
+
+                <!-- Profile Image -->
+                <div
+                    class="tilt-item relative rounded-3xl transition-all duration-300 border border-white/10 hover:border-[#455CE9]">
+                    <img src="{% static 'images/me.png' %}"
+                        class="rounded-3xl w-[320px] h-[380px] object-cover shadow-lg">
+                </div>
+
+                <!-- STAT 1 (top-right) -->
+                <div class="stat-card tilt-item absolute -top-6 right-4 md:right-12 bg-[#0d0d0d] px-6 py-4 
+        rounded-2xl border border-white/10 hover:border-[#455CE9] transition-all shadow-xl 
+        opacity-0 translate-y-6">
+                    <h3 class="text-3xl font-semibold counter" data-target="100">0 </h3>
+                    <p class="text-gray-400 text-sm">Dicipline %</p>
+                </div>
+
+
+                <!-- STAT 2 (bottom-left) -->
+                <div class="stat-card tilt-item absolute bottom-4 left-4 md:left-12 bg-[#0d0d0d] px-6 py-4 mb-2
+        rounded-2xl border border-white/10 hover:border-[#455CE9] transition-all shadow-xl
+        opacity-0 translate-y-6">
+                    <h3 class="text-3xl font-semibold counter" data-target="100">0 </h3>
+                    <p class="text-gray-400 text-sm">Confidence %</p>
+                </div>
+
+
+
+
+            </div>
+
+            <!-- RIGHT SIDE: TEXT CONTENT -->
+            <div class="opacity-0 translate-y-10 about-text">
+
+                <h2 class="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+                    Who I Am
+                </h2>
+
+                <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                    I’m a Venu Kumar Chittimalla having Passion Software and Machie Learning Engineering pursuing
+                    Electrical and Electronics
+                    Engineering at ANITS (CGPA: 8.12), with a strong focus on backend and frontend engineering, Data
+                    Analysis...
+
+                </p>
+
+                <p class="text-gray-400 text-sm leading-relaxed mb-10">
+                    I enjoy building systems that merge innovation with practical value — products that are fast,
+                    scalable, and genuinely useful. I’m particularly interested in backend development, distributed
+                    systems, and full-stack engineering, and I’m actively exploring opportunities where I can build,
+                    optimize, and scale impactful applications.
+                </p>
+
+                <!-- Signature -->
+                <p class="text-4xl font-semibold tracking-tight opacity-80">
+                    — Venu Kumar Chittimalla
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--About Me Section-->
+    <!--Experience Section-->
+    <section id="experience" class="w-full bg-black text-white py-32 px-6">
+
+        <div class="max-w-3xl mx-auto">
+
+            <!-- Section Title -->
+            <h2 class="text-4xl md:text-5xl font-semibold mb-16 opacity-0 translate-y-6 exp-title">
+                Proffessional Journey
+            </h2>
+
+            <!-- CHAPTER — CEERAS IT SERVICES -->
+            <div class="mb-16">
+                <h3 class="chapter-title text-2xl md:text-3xl font-semibold mb-4 opacity-0"
+                    data-text="Ceeras IT Services - Software Intern">
+                </h3>
+
+                <p class="chapter-text text-gray-300 text-lg leading-relaxed opacity-0 translate-y-4">
+                    At Ceeras IT Services, I worked as a Software Engineering Intern contributing to
+                    <span class="text-white font-semibold">Where2Purchase</span>, a vendor management and purchasing
+                    platform.
+                    My role centered on building backend logic, structuring scalable Django REST APIs, managing
+                    PostgreSQL
+                    integrations, and participating in agile sprint cycles. I collaborated with senior engineers to
+                    translate
+                    requirements into production-ready functionality and helped improve the system’s reliability, data
+                    flow,
+                    and feature delivery pipeline.
+                </p>
+            </div>
+
+
+            <!-- CHAPTER — SUS Hacks Hackathon -->
+            <div class="mb-16">
+                <h3 class="chapter-title text-2xl md:text-3xl font-semibold mb-4 opacity-0"
+                    data-text="SUS Hacks Hackathon">
+                </h3>
+
+                <p class="chapter-text text-gray-300 text-lg leading-relaxed opacity-0 translate-y-4">
+                    I participated in the SUS Hacks Hackathon, where my team was selected among the
+                    <span class="text-white font-semibold">Top 10 out of 200+ teams</span> for building a live,
+                    real-time road safety alert system within 24 hours. We engineered a dynamic moving-geofencing
+                    model capable of detecting collision risk using GPS streams, Django REST APIs.
+                    The event sharpened my ability to build fast, think clearly under pressure, and deliver a functional
+                    end-to-end system in a compressed timeframe.
+                </p>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!--Experience Section-->
+
+
+    <!--Project Section-->
+    <section id="projects" class="w-full bg-black text-white py-24 px-6">
+
+        <!-- Title + Description -->
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-start mb-14">
+
+            <!-- LEFT TITLE -->
+            <h1 class="projects-title text-4xl md:text-5xl font-semibold leading-tight opacity-0 translate-y-6">
+                Impressive Works
+            </h1>
+
+
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- CARD 1 -->
+            <div class="project-card opacity-0 translate-y-10 group cursor-pointer">
+                <div
+                    class="rounded-2xl border border-white/10 overflow-hidden transition-all group-hover:border-blue-500/60">
+                    <img src="{% static 'images/zokart.png' %}"
+                        class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <p class="flex items-center gap-2 mt-3 text-sm text-gray-300 group-hover:text-white">
+                    <span>↗</span> <a href="{%url 'project1'%}">See More</a>
+                </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="project-card opacity-0 translate-y-10 group cursor-pointer">
+                <div
+                    class="rounded-2xl border border-white/10 overflow-hidden transition-all group-hover:border-blue-500/60">
+                    <img src="https://via.placeholder.com/800x500/8fa4f7"
+                        class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <p class="flex items-center gap-2 mt-3 text-sm text-gray-300 group-hover:text-white">
+                    <span>↗</span> <a href="{%url 'project2'%}">See More</a>
+                </p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="project-card opacity-0 translate-y-10 group cursor-pointer">
+                <div
+                    class="rounded-2xl border border-white/10 overflow-hidden transition-all group-hover:border-blue-500/60">
+                    <img src="{% static 'images/say.png' %}"
+                        class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <p class="flex items-center gap-2 mt-3 text-sm text-gray-300 group-hover:text-white">
+                    <span>↗</span> <a href="{%url 'project3'%}">See More</a>
+                </p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="project-card opacity-0 translate-y-10 group cursor-pointer">
+                <div
+                    class="rounded-2xl border border-white/10 overflow-hidden transition-all group-hover:border-blue-500/60">
+                    <img src="{% static 'images/portfolio.png' %}"
+                        class="w-full h-[300px] object-cover group-hover:scale-105 transition-all duration-500">
+                </div>
+                <p class="flex items-center gap-2 mt-3 text-sm text-gray-300 group-hover:text-white">
+                    <span>↗</span> <a href="{%url 'project4'%}">Portfolio</a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="w-full flex justify-center mt-16 opacity-20 translate-y-6 explore-btn">
+            <h2 class="flex items-center gap-2 mt-3 text-sm text-gray-300 group-hover:text-white">
+                Execution matters more than ideas — projects prove it
+            </h2>
+        </div>
+
+    </section>
+
+    <!--Project Section-->
+
+
+
+
+
+    <!--Skill Section-->
+    <section id="skills">
+
+        <!-- TITLE -->
+        <div class="text-center mt-28">
+            <h1 class="text-white text-5xl font-light leading-tight">
+                Skills that fuel my <br> passion
+            </h1>
+        </div>
+
+
+
+        <!-- SKILL CARDS GRID -->
+        <div class="container mx-auto px-6 mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- FRONT END -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            class="w-9" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            class="w-9" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Front-End Development</h2>
+                    <p class="text-gray-400 text-sm">
+                        Building engaging and user-friendly web interfaces using modern frameworks.
+                    </p>
+                </div>
+
+                <!-- STYLING -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                            class="w-9" />
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            class="w-9" />
+                        <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/master/.github/logo-dark.svg"
+                            class="w-12" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Styling & Design</h2>
+                    <p class="text-gray-400 text-sm">
+                        Creating responsive, visually appealing designs using modern styling tools.
+                    </p>
+                </div>
+
+                <!-- PROGRAMMING LANGUAGES -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                            class="w-12" />
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            class="w-9" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Programming Languages</h2>
+                    <p class="text-gray-400 text-sm">
+                        Efficient problem-solving using strong algorithmic thinking.
+                    </p>
+                </div>
+
+                <!-- BACKEND -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            class="w-9" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                            class="w-9" />
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Back-End Development</h2>
+                    <p class="text-gray-400 text-sm">
+                        Developing scalable APIs and robust server-side logic.
+                    </p>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+                        <<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                            class="w-12" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                            class="w-12" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg"
+                            class="w-12" />
+                        <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" class="w-12" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Web Animations</h2>
+                    <p class="text-gray-400 text-sm">
+                        Creating seamless transitions and interactions for better UX.
+                    </p>
+                </div>
+
+                <!-- DATABASES -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            class="w-12" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Database Management</h2>
+                    <p class="text-gray-400 text-sm">
+                        Designing and managing databases for efficient data storage.
+                    </p>
+                </div>
+
+                <!-- CS CONCEPTS -->
+                <div class="skill-card p-6">
+                    <h2 class="text-white text-lg mb-3">Core Computer Science Concepts</h2>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Operating Systems</span>
+                        <span class="tag">Networks</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">System Design</span>
+                        <span class="tag">DSA</span>
+                    </div>
+                </div>
+
+                <!-- CLOUD -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                            class="w-9" />
+                        <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" class="w-12" />
+                        <img src="https://railway.app/brand/logo-light.svg" class="w-12" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Cloud & Deployment</h2>
+                    <p class="text-gray-400 text-sm">
+                        Deploying and scaling modern cloud applications.
+                    </p>
+                </div>
+
+
+                <!-- VERSION CONTROL -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                            class="w-12" />
+
+                        <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/github.svg"
+                            class="w-12 invert" />
+
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Version Control & Collaboration</h2>
+
+                    <p class="text-gray-400 text-sm">
+                        Managing code efficiently with Git and modern collaboration tools.
+                    </p>
+
+                </div>
+                <!-- TOOLS -->
+                <div class="skill-card p-6">
+                    <div class="flex gap-2 mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg"
+                            class="w-12" />
+
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                            class="w-12" />
+                        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" class="w-12" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                            class="w-12" />
+
+                    </div>
+                    <h2 class="text-white text-lg mb-1">Tools</h2>
+
+                    <p class="text-gray-400 text-sm">
+                        Control and Code done with these Tools...
+                    </p>
+
+                </div>
+
+                <!-- PERSONAL DEVELOPMENT -->
+                <div class="skill-card p-6">
+                    <h2 class="text-white text-lg mb-3">Personal Development</h2>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Time Management</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Communication</span>
+                    </div>
+                </div>
+
+                <!-- TESTING -->
+                <div class="skill-card p-6">
+                    <h2 class="text-white text-lg mb-1">Testing & Debugging</h2>
+                    <p class="text-gray-400 text-sm">
+                        Ensuring code quality with rigorous testing workflows.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!--Contact Section-->
+    <section id="contact" class="w-full bg-black text-white py-28 px-6">
+
+        <div class="container mx-auto text-center">
+
+            <!-- Heading -->
+            <h2 class="text-4xl md:text-5xl font-semibold leading-tight opacity-0 translate-y-6 contact-title">
+                Connect With Me
+            </h2>
+
+            <p class="text-gray-400 text-sm mt-3 opacity-0 translate-y-6 contact-sub">
+                Write the first message — I’ll handle the next commit.
+            </p>
+
+            <!-- CONTACT FORM CARD -->
+            <div
+                class="max-w-2xl mx-auto mt-16 p-10 rounded-3xl bg-[#0d0d0d] border border-white/10 opacity-0 translate-y-10 contact-form">
+
+                <form action="https://formspree.io/f/rishikumar54020@gmail.com" method="POST" class="space-y-6">
+
+                    <!-- Name -->
+                    <div class="text-left">
+                        <label class="block text-sm mb-1">Your Name</label>
+                        <input type="text" name="name" required
+                            class="w-full px-4 py-3 rounded-xl bg-black border border-white/10 text-white focus:border-blue-500 focus:outline-none" />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="text-left">
+                        <label class="block text-sm mb-1">Your Email</label>
+                        <input type="email" name="email" required
+                            class="w-full px-4 py-3 rounded-xl bg-black border border-white/10 text-white focus:border-blue-500 focus:outline-none" />
+                    </div>
+
+                    <!-- Message -->
+                    <div class="text-left">
+                        <label class="block text-sm mb-1">Message</label>
+                        <textarea name="message" rows="5" required
+                            class="w-full px-4 py-3 rounded-xl bg-black border border-white/10 text-white focus:border-blue-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button
+                        class="w-full py-4 bg-gray-600 hover:bg-black-700 transition rounded-xl text-lg font-medium">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- BOTTOM SIGNATURE -->
+    <div class="bg-white text-black py-20 text-center">
+        <p class="text-xl mb-2">Always Improving... Always Learning...</p>
+        <h1 class="text-[120px] font-light leading-none">Venu Kumar</h1>
+    </div>
+
+
+    <script src="{%static 'js/main.js' %}"></script>
+</body>
+
+</html>

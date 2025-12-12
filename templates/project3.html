@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= GO BACK ================= -->
+    <a href="{% url 'home' %}" class="fixed top-6 left-6 text-gray-400 hover:text-white text-sm tracking-wide">
+        ← Go Back
+    </a>
+
+
+    <!-- ================= PROJECT TITLE ================= -->
+    <section class="w-full pt-32 pb-16 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-semibold opacity-0 translate-y-6 project-title">
+            Say Web App
+        </h1>
+        <p class="max-w-xl mx-auto text-gray-400 text-sm mt-4 opacity-0 translate-y-6 project-sub">
+            A deeper look into how this project was built, the process, decisions,
+            technologies, and the final outcome.
+        </p>
+    </section>
+
+
+    <!-- ================= PROJECT IMAGE ================= -->
+    <section class="w-full px-6 pb-20">
+        <img src="{% static 'images/say.png' %}"
+            class="w-full h-[420px] object-cover rounded-3xl border border-white/10 opacity-0 translate-y-6 project-img">
+    </section>
+
+    <div class="w-full flex justify-center mt-10">
+        <div class="flex gap-6">
+
+            <!-- LIVE DEMO BUTTON -->
+            <a href="https://your-live-demo-link" target="_blank" class="px-6 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 
+              text-white text-sm font-medium flex items-center gap-3
+              hover:bg-white/20 transition-all duration-300 shadow-lg">
+
+                <!-- Link Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M13.5 6H9a3 3 0 00-3 3v6a3 3 0 003 3h6a3 3 0 003-3v-4.5m0-3L12 12m4.5-4.5L12 12" />
+                </svg>
+
+                Live Demo
+            </a>
+
+            <!-- GITHUB BUTTON -->
+            <a href="https://github.com/your-repo" target="_blank" class="px-6 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20
+              text-white text-sm font-medium flex items-center gap-3
+              hover:bg-white/20 transition-all duration-300 shadow-lg">
+
+                <!-- GitHub Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path d="M12 .5C5.649.5.5 5.797.5 12.297c0 5.215 3.438 9.645 8.207 11.204.6.113.82-.27.82-.6
+                  0-.297-.011-1.083-.017-2.127-3.338.758-4.042-1.658-4.042-1.658-.546-1.425-1.333-1.806-1.333-1.806
+                  -1.089-.777.083-.762.083-.762 1.205.087 1.84 1.278 1.84 1.278 1.07 1.907 2.807 1.356 3.492 1.037
+                  .108-.803.418-1.356.762-1.67-2.665-.316-5.467-1.39-5.467-6.183 0-1.366.465-2.482 1.235-3.357
+                  -.124-.318-.536-1.593.117-3.32 0 0 1.008-.335 3.3 1.28a11.27 11.27 0 013.01-.42c1.02.005 2.047.145 3.01.42
+                  2.29-1.615 3.297-1.28 3.297-1.28.655 1.727.243 3.002.12 3.32.77.875 1.232 1.991 1.232 3.357
+                  0 4.804-2.807 5.864-5.48 6.172.43.385.823 1.15.823 2.32 0 1.674-.015 3.02-.015 3.43
+                  0 .334.218.72.825.597A11.81 11.81 0 0023.5 12.297C23.5 5.797 18.351.5 12 .5z" />
+                </svg>
+
+                GitHub Repo
+            </a>
+
+        </div>
+    </div>
+    <!-- ================= PROJECT DESCRIPTION (Skills-style layout) ================= -->
+    <section class="w-full px-6 py-24">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+
+            <!-- LEFT -->
+            <div>
+                <h2 class="text-3xl font-semibold mb-6 opacity-0 translate-y-6 project-h2">
+                    Overview
+                </h2>
+
+                <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                    SayApp was designed to provide fast, stable, and low-latency video communication using Agora’s
+                    real-time engagement platform. The goal was to create an interface that is clean, distraction-free,
+                    and optimized for instant connections. The entire flow—from joining a room to starting a call—was
+                    built to be as simple and dependable as possible.
+                    The design avoids unnecessary elements and focuses on clarity, reliability, and a clean modern
+                    aesthetic appropriate for a communication tool. </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div>
+                <h2 class="text-3xl font-semibold mb-6 opacity-0 translate-y-6 project-h2">
+                    Technologies Used
+                </h2>
+
+                <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                    • Agora SDK for real-time video and audio <br>
+                    • JavaScript <br>
+                    • Node.js or Django backend (depending on your setup) <br>
+                    • Token authentication for secure channel access <br>
+                    • Tailwind CSS for UI <br>
+                    • Responsive layout system <br><br>
+                    • Component-based UI architecture The stack prioritizes stable video performance, efficient state
+                    handling, and predictable user interactions.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= PROCESS SECTION ================= -->
+    <section class="w-full px-6 py-24 bg-[#0a0a0a]">
+        <div class="max-w-3xl mx-auto">
+
+            <h2 class="text-3xl font-semibold mb-10 opacity-0 translate-y-6 project-h2">
+                Process & Decisions
+            </h2>
+
+            <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                The workflow was structured around Agora’s channel-based architecture. The joining, publishing, and
+                subscribing processes were implemented to ensure smooth transitions and minimal waiting time. <br><br>
+
+
+                UI decisions focused on reducing complexity—only essential controls (mute, end call, camera toggle) were
+                included to keep the interface clean. Animations and micro-interactions were added sparingly to enhance
+                clarity, not decoration.
+                <br><br>
+
+                Connection logic, token generation, and error handling were tested extensively to maintain call
+                stability. The design avoids clutter and ensures that all focus stays on the call experience itself.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= RESULT SECTION ================= -->
+    <section class="w-full px-6 py-24">
+        <div class="max-w-3xl mx-auto">
+
+            <h2 class="text-3xl font-semibold mb-10 opacity-0 translate-y-6 project-h2">
+                Final Outcome
+            </h2>
+
+            <p class="text-gray-300 text-lg leading-relaxed opacity-0 translate-y-6 project-text">
+                SayApp delivers a reliable, fast, and modern video calling experience backed by Agora’s real-time
+                technology. Calls connect quickly, the interface remains simple to understand, and performance stays
+                consistent across different networks.
+
+                The final product reflects deliberate engineering and minimalistic design—stable streaming, smooth
+                transitions, and a professional UI built for real-world communication use cases. </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= GSAP ANIMATIONS ================= -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray([
+            ".project-title", ".project-sub",
+            ".project-img",
+            ".project-h2", ".project-text"
+        ]).forEach(el => {
+            gsap.to(el, {
+                opacity: 1,
+                y: 0,
+                duration: 1.1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%"
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
